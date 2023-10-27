@@ -1,0 +1,40 @@
+# Based on D Parkhurst's post at https://phreeqcusers.org/index.php/topic,1971.msg6964.html#msg6964
+
+PHASES
+	Fix_H+
+		H+ = H+
+		log_k 0
+
+	LiBr
+		LiBr = Li+ + Br-
+		log_k -15
+END
+
+SOLUTION 1 Wastewater
+	temp      25
+	pH        8.23
+	pe        -3
+	redox     pe
+	units     mmol/l
+	density   1
+
+	Al        5.26
+	C(4)      285.69
+	Ca        200 #37.95
+	Cl        40.91
+	Fe        2.16
+	K         66.68
+	Mg        22.13
+	Na        26.12
+	P         26.2
+	S         0.1
+	-water    1 # kg
+
+EQUILIBRIUM_PHASES 1
+	Fix_H+ -8.23  LiOH
+	LiBr    0  10
+	Calcite 0 0
+	Gibbsite
+	Siderite
+	Vivianite 0 0
+END
