@@ -1,0 +1,25 @@
+DATABASE c:\phreeqc\database\PHREEQC.DAT # this is the default
+
+SOLUTION 1 HCl soln
+	units mmol/kgw # this is the default; for the inputs
+	temp 25 # this is the default
+	pH 7 charge
+	Cl 1
+	
+SOLUTION 2 How much HCl for pH 4
+	units mmol/kgw # this is the default; for the inputs
+	temp 25 # this is the default
+	pH 4 
+	Cl 1 charge
+	
+SOLUTION 3 Find pH of 1 mmol/kgw C_tot, closed system
+	units mmol/kgw
+	temp 25
+	pH 5 charge
+	C(4) 1
+	
+SOLUTION 4 Find pH of rain (w/o SOx)
+	units mmol/kgw
+	temp 25
+	pH 5 charge
+	C(4) 1 CO2(g) -3.5 # P_CO2 = 10^-3.5 atm = 316 ppm
