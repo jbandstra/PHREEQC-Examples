@@ -1,2 +1,4 @@
 # Ignore .out files
 *.out
+# Ignore .log files
+*.log
