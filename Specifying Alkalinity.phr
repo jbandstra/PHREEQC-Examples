@@ -1,0 +1,9 @@
+# Setting alkalinity to 1 meq/L with two different units systems.
+SOLUTION 1
+	temp 25
+	pH 8
+	Alkalinity 50.04345 mg/kgw as Ca.5(CO3).5 # as CaCO3
+SOLUTION 2
+	temp 25
+	pH 8
+	Alkalinity 1 # meq/L
