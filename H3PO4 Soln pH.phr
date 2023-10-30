@@ -1,0 +1,9 @@
+DATABASE c:\phreeqc\database\PHREEQC.DAT
+
+TITLE Find the pH of a 1 mM phosphoric acid solution.
+
+SOLUTION 1
+	temp 25
+	units mmol/L
+	pH 5 charge
+	P 1

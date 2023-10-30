@@ -1,0 +1,28 @@
+DATABASE c:\phreeqc\database\PHREEQC.DAT
+
+TITLE . Find the pH and alkalinity of water equilibrated with calcite under open conditions with partial pressure of CO2 at 300 ppm, 350 ppm, 400 ppm, 450 ppm, and 500 ppm.
+
+SOLUTION 1 300 ppm CO2
+	pH 7 charge
+	C(4) 1 CO2(g) -3.523
+	Ca 1 Calcite 0.0
+
+SOLUTION 2 350 ppm CO2
+	pH 7 charge
+	C(4) 1 CO2(g) -3.456
+	Ca 1 Calcite 0.0
+	
+SOLUTION 3 400 ppm CO2
+	pH 7 charge
+	C(4) 1 CO2(g) -3.398
+	Ca 1 Calcite 0.0
+
+SOLUTION 4 450 ppm CO2
+	pH 7 charge
+	C(4) 1 CO2(g) -3.347
+	Ca 1 Calcite 0.0
+	
+SOLUTION 5 500 ppm CO2
+	pH 7 charge
+	C(4) 1 CO2(g) -3.301
+	Ca 1 Calcite 0.0

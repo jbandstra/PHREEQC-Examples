@@ -1,0 +1,15 @@
+DATABASE c:\phreeqc\database\PHREEQC.DAT
+
+TITLE Find the pH of a solution equilibrated with a gas phased containing 1x10-4 atm ammonia gas . What are the ammonia and ammonium concentrations and activities?
+
+SOLUTION 1 Perform calculation using within the soln keyword
+	pH 8 charge
+	Amm 1 Amm(g) -4
+END
+
+SOLUTION 2 Perform same calculation using equil. phase
+	pH 8
+EQUILIBRIUM_PHASES 2
+	Amm(g) -4
+END
+	
