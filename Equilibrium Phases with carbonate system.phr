@@ -1,0 +1,29 @@
+DATABASE c:\phreeqc\database\PHREEQC.DAT # the default
+
+SOLUTION 1 Rainwater
+	temp 25
+	pH 7
+EQUILIBRIUM_PHASES 1
+	CO2(g) -3.5 1 # SI, Mol CO2 avail
+END
+
+SOLUTION 2 Closed system CaCO3(s) equil.
+	temp 25
+	pH 7
+EQUILIBRIUM_PHASES 2
+	Calcite 0.0 # SI=0
+SAVE solution 2
+END
+
+USE solution 2 # water equil with calcite then opened to atm (after calcite solid is no longer present)
+EQUILIBRIUM_PHASES 1
+	CO2(g) -3.5 1 # SI, Mol CO2 avail
+END
+
+SOLUTION 3 Equilibration with CaCO3(s) under open conditions
+	temp 25
+	pH 7 charge
+EQUILIBRIUM_PHASES 
+	Calcite 0.0 # sets equil with CaCO3(s)
+	CO2(g) -3.5 # forces system to be open to atm.
+
