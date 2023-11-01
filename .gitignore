@@ -4,3 +4,5 @@
 *.log
 # Ignore .txt files
 *.txt
+# Ignore .File files
+*.File
