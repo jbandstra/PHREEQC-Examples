@@ -1,6 +1,88 @@
-SOLUTION 1 Al conc under gibbsite solubility control, pH 4
-	pH 4
+DATABASE c:\phreeqc\database\PHREEQC.DAT
+
+TITLE Graph Al conc vs pH under Gibbsite solubility control
+
+# An inadequate appraoch, see below for better approach
+# SOLUTION 1
+	# units mmol/kgw
+	# temp 25
+	# pH 3.5
+	# Cl 10000 charge
+	# Al 1 Gibbsite 0.0
+
+# EQUILIBRIUM_PHASES 1
+	# Gibbsite 0.0 10.0
+
+# REACTION 1 Titrating caustic soda
+	# NaOH
+	# 0.1 moles in 10000 steps
+
+# INCREMENTAL_REACTIONS true
+
+# USER_GRAPH 1
+	# -axis_titles "pH" "Al Conc. (mg/L)"
+	# -axis_scale y_axis a a a a log #to log scale the conc axis
+	# -initial_solutions true
+	# -connect_simulations true
+	
+	# -start
+	# 10 GRAPH_X -LA("H+")
+	# 20 GRAPH_Y TOT("Al")
+	# -end
+# END
+
+# Better approach
+PHASES
+     Fix_H+
+     H+ = H+
+     log_k  0.0
+     
+     LiBr
+     LiBr = Li+ + Br-
+     log_k -15
+END
+
+SOLUTION 1
+	units mmol/kgw
+	temp 25
+	pH 3.5
+	Cl 10000 charge
 	Al 1 Gibbsite 0.0
-SOLUTION 2 Al conc under gibbsite solubility control, pH 7
-	pH 7
-	Al 1 Gibbsite 0.0
+	
+# EQUILIBRIUM_PHASES 1
+	# Gibbsite 0.0 10
+	# Fix_H+ -4 NaOH 10 # target pH is 4
+	
+SELECTED_OUTPUT
+     -file Gibbsite_Sol_Curve
+     -reset false
+USER_PUNCH
+  10 FOR i = 4 to 9 STEP 0.25
+  20 a$ = EOL$ + "USE solution 1" + EOL$
+  30 a$ = a$ + "EQUILIBRIUM_PHASES 1" + EOL$
+  40 a$ = a$ + "   Fix_H+ " + STR$(-i) + " LiOH 10.0" + EOL$
+  43 a$ = a$ + "   LiBr 0.0 10.0"  + EOL$
+  47 a$ = a$ + "   Gibbsite 0.0 10" + EOL$
+  50 a$ = a$ + "END" + EOL$
+  60 PUNCH a$
+  70 NEXT i
+END
+
+USER_PUNCH
+ 10
+ 
+USER_GRAPH 1 Example 8
+	-axis_titles "pH" "Al Conc. (mg/L)"
+	-axis_scale y_axis a a a a log #to log scale the conc axis
+	-initial_solutions true
+	-connect_simulations true
+	
+	-start
+	10 GRAPH_X -LA("H+")
+	20 GRAPH_Y TOT("Al")
+	-end
+  -end
+INCLUDE$ Gibbsite_Sol_Curve
+END
+	
+	
