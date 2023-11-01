@@ -4,5 +4,5 @@
 *.log
 # Ignore .txt files
 *.txt
-# Ignore .File files
-*.File
+# Ignore specific files
+Gibbsite_Sol_Curve
