@@ -2,3 +2,5 @@
 *.out
 # Ignore .log files
 *.log
+# Ignore .txt files
+*.txt
