@@ -1,0 +1,43 @@
+TITLE Use Calculate values keyword to compute acidity values based on the approach presented by Kirby and Cravotta 2005. Demonstrate the use with a user print and a selected output.
+
+SOLUTION 1
+	units mg/L
+	pH 3.5 charge
+	Al 10
+	Fe 25
+	C 1
+	S 1
+	Mn 0.5
+
+
+
+CALCULATE_VALUES # Based on Table 2 in Kirby and Cravotta Applied Geochem 2005 part 1.
+	Acy
+	-start
+	10 Acy_FeII = 3*MOL("FeHSO4+") + 2*MOL("Fe+2") + 2*MOL("FeSO4") + 2*MOL("FeHCO3+") + MOL("FeOH+") + MOL("FeCO3")
+	20 Acy_FeIII = 5*MOL("Fe3(OH)4+5") + 4*MOL("FeHSO4+2") + 4*MOL("Fe2(OH)2+4") + 3*MOL("Fe+3") + 3*MOL("FeSO4+") + 3*MOL("Fe(SO4)2-") + 2*MOL("Fe(OH)2+") + MOL("FeOH+") - MOL("Fe(OH)4-")
+	30 Acy_Al = 4*MOL("AlHSO4+2") + 3*MOL("Al+3") + 3*MOL("AlSO4+") +3*MOL("Al(SO4)2-") + 2*MOL("AlOH+2") + MOL("Al(OH)2+") - MOL("Al(OH)4-")
+	40 Acy_Mn = 2*MOL("Mn+2") + 2*MOL("MnSO4") + MOL("MnOH+")
+	50 Acy_H = MOL("H+") - MOL("OH-")
+	60 Acy_C = MOL("CO2") - MOL("CO3-2")
+	70 Acy_H2S = MOL("H2S") - MOL("S-2")
+	80 Acy_SO4 = MOL("HSO4-")
+	98 Acy_tot = Acy_FeII + Acy_FeIII + Acy_Al + Acy_Mn + Acy_H + Acy_C + Acy_H2S + Acy_SO4
+	99 PUT(Acy_tot, 1)
+	100 SAVE Acy_tot
+	-end
+	
+
+	
+USER_PRINT
+-start
+10 Acy_tot = GET(1)
+20 PRINT Acy_tot
+-end
+
+
+SELECTED_OUTPUT
+	-file Acidity_Calculation.txt
+	-calculate_values     Acy
+	
+END
