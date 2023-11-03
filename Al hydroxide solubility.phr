@@ -72,15 +72,31 @@ END
 USER_PUNCH
  10
 
+# SELECTED_OUTPUT 
+	# -file Gibbsite_Sol_Curve_Results.csv
+	# -reset false
+	# -pH true
+	# -totals Al
+	
 USER_GRAPH 1 Example 8
-	-axis_titles "pH" "Al Conc. (mg/L)"
-	-axis_scale y_axis a a a a log #to log scale the conc axis
+	-headings Al_tot, Al+3, AlOH+2, Al(OH)2+, Al(OH)3, Al(OH)4-
+	-axis_titles "pH" "Al Conc. (mol/L)"
+	-axis_scale y_axis 1e-14 1e-3 a a log #to log scale the conc axis
 	-initial_solutions true
 	-connect_simulations true
 	
 	-start
-	10 GRAPH_X -LA("H+")
-	20 GRAPH_Y TOT("Al")
+	10 PLOT_XY -LA("H+"), TOT("Al")
+	20 PLOT_XY -LA("H+"), MOL("Al+3")
+	30 PLOT_XY -LA("H+"), MOL("AlOH+2")
+	40 PLOT_XY -LA("H+"), MOL("Al(OH)2+")
+	50 PLOT_XY -LA("H+"), MOL("Al(OH)3")
+	60 PLOT_XY -LA("H+"), MOL("Al(OH)4-")
+	
+	# 10 GRAPH_X -LA("H+")
+	# 20 GRAPH_Y TOT("Al")
+	# 25 GRAPH_X -LA("H+")
+	# 30 GRAPH_Y MOL("Al+3")
 	-end
   -end
 INCLUDE$ Gibbsite_Sol_Curve
