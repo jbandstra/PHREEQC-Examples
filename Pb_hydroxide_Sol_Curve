@@ -1,0 +1,202 @@
+
+
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+           -6 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -6.2500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -6.5000e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -6.7500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+           -7 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -7.2500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -7.5000e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -7.7500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+           -8 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -8.2500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -8.5000e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -8.7500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+           -9 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -9.2500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -9.5000e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -9.7500e+00 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+          -10 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -1.0250e+01 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -1.0500e+01 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -1.0750e+01 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+          -11 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -1.1250e+01 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -1.1500e+01 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+  -1.1750e+01 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+USE solution 1
+EQUILIBRIUM_PHASES 1
+   Fix_H+          -12 LiOH 10.0
+   LiBr 0.0 10.0
+   Pb(OH)2 0.0 10
+END
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
